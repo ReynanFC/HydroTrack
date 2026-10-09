@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="hydro_background">#0A151E</color>
+    <color name="hydro_surface_tint">#0F2C3D</color>
+    <color name="hydro_foreground">#E5F1F7</color>
+    <color name="hydro_primary">#50BDF8</color>
+    <color name="hydro_muted_foreground">#9CAEB8</color>
+    <color name="hydro_card">#15232F</color>
+    <color name="hydro_card_foreground">#E5F1F7</color>
+    <color name="hydro_water_track">#294354</color>
+    <color name="hydro_border">#344551</color>
+    <color name="hydro_water_soft">#0F374C</color>
+    <color name="hydro_water_line">#2A5871</color>
+</resources>

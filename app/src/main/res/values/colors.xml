@@ -2,4 +2,23 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="hydro_background">#F3F9FD</color>
+    <color name="hydro_surface_tint">#E4F6FF</color>
+    <color name="hydro_foreground">#0F293A</color>
+    <color name="hydro_primary">#008ADF</color>
+    <color name="hydro_muted_foreground">#596C78</color>
+    <color name="hydro_card">#FFFFFF</color>
+    <color name="hydro_card_foreground">#0F293A</color>
+    <color name="hydro_water_track">#CCE6F5</color>
+    <color name="hydro_border">#D7E3EC</color>
+    <color name="hydro_water_soft">#CCF1FF</color>
+    <color name="hydro_water_line">#A5D2EC</color>
+    <color name="hydration_status_background">#0F374C</color>
+    <color name="hydration_status_foreground">#50BDF8</color>
+    <color name="edit_goal_accent">#50BDF8</color>
+    <color name="edit_goal_card">#15232F</color>
+    <color name="edit_goal_input_background">#0A151E</color>
+    <color name="edit_goal_foreground">#E5F1F7</color>
+    <color name="edit_goal_muted_foreground">#9CAEB8</color>
 </resources>

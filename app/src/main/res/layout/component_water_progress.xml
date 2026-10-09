@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/water_progress_view"
+        android:layout_width="304dp"
+        android:layout_height="304dp"
+        android:contentDescription="@string/water_progress_accessibility">
+
+        <View
+            android:layout_width="296dp"
+            android:layout_height="296dp"
+            android:layout_gravity="center"
+            android:background="@drawable/background_progress_ring_glow" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/water_progress_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="0"
+            app:indicatorColor="@color/hydro_primary"
+            app:indicatorDirectionCircular="clockwise"
+            app:indicatorSize="264dp"
+            app:trackColor="@color/hydro_water_track"
+            app:trackCornerRadius="8dp"
+            app:trackThickness="16dp"
+            tools:progress="68" />
+
+        <LinearLayout
+            android:layout_width="208dp"
+            android:layout_height="208dp"
+            android:layout_gravity="center"
+            android:background="@drawable/background_progress_center"
+            android:elevation="8dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/background_progress_icon"
+                android:contentDescription="@null"
+                android:padding="9dp"
+                android:src="@drawable/ic_water_drop"
+                app:tint="@color/hydration_status_foreground" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="@string/water_progress_label"
+                android:textColor="@color/hydro_muted_foreground"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/text_water_percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/water_progress_default_percentage"
+                android:textColor="@color/hydro_card_foreground"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                tools:text="68%" />
+
+            <TextView
+                android:id="@+id/text_water_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/water_progress_default_volume"
+                android:textColor="@color/hydro_primary"
+                android:textSize="14sp"
+                tools:text="1360 de 2000 ml" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text_water_progress_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="@string/water_progress_default_message"
+        android:textColor="@color/hydro_muted_foreground"
+        android:textSize="14sp"
+        tools:text="Faltam 640 ml para sua meta diária." />
+
+</LinearLayout>

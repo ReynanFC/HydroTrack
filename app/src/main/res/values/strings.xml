@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">HydroTrack</string>
+    <string name="header_tagline">Seu bem-estar, gota a gota.</string>
+    <string name="hydration_status_in_progress">Sua hidratação de hoje</string>
+    <string name="water_progress_accessibility">Progresso do consumo diário de água</string>
+    <string name="water_progress_label">Consumo diário de água</string>
+    <string name="water_progress_default_percentage">0%</string>
+    <string name="water_progress_default_volume">0 de 2000 ml</string>
+    <string name="water_progress_default_message">Comece o dia com um copo de água.</string>
+    <string name="summary_consumed_today">Consumido hj</string>
+    <string name="summary_daily_goal">Meta diária</string>
+    <string name="summary_default_consumed">0</string>
+    <string name="summary_default_goal">2.000</string>
+    <string name="summary_unit_ml">ml</string>
+    <string name="edit_goal_title">Alterar meta diária</string>
+    <string name="edit_goal_description">Defina a quantidade de água que deseja consumir por dia.</string>
+    <string name="edit_goal_input_label">Meta diária</string>
+    <string name="edit_goal_save">Salvar meta</string>
+    <string name="edit_goal_close">Fechar edição da meta diária</string>
+    <string name="quick_add_eyebrow">Hora de se hidratar</string>
+    <string name="quick_add_title">Registrar consumo</string>
+    <string name="quick_add_200">+ 200 ml</string>
+    <string name="quick_add_300">+ 300 ml</string>
+    <string name="quick_add_500">+ 500 ml</string>
+    <string name="quick_add_glass">Copo pequeno</string>
+    <string name="quick_add_large_glass">Copo grande</string>
+    <string name="quick_add_bottle">Garrafa</string>
 </resources>
