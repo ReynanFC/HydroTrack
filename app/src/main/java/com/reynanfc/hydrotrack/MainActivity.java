@@ -11,7 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.reynanfc.hydrotrack.ui.home.EditDailyGoalDialogFragment;
-import com.reynanfc.hydrotrack.ui.home.HomeDateFormatter;
+import com.reynanfc.hydrotrack.ui.home.utils.HomeDateFormatter;
 
 public class MainActivity extends AppCompatActivity {
 

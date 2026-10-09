@@ -1,4 +1,4 @@
-package com.reynanfc.hydrotrack.ui.home;
+package com.reynanfc.hydrotrack.ui.home.utils;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
