@@ -16,7 +16,6 @@
     <string name="water_progress_absolute">%1$d/%2$d ml</string>
     <string name="water_progress_volume_of_goal">%1$d de %2$d ml</string>
     <string name="water_progress_percent_of_goal">%d%% da meta</string>
-    <string name="water_progress_accessibility_value">Consumo diário de água: %1$d%%, %2$d de %3$d ml. Toque para alternar a exibição.</string>
     <string name="edit_goal_title">Alterar meta diária</string>
     <string name="edit_goal_description">Defina a quantidade de água que deseja consumir por dia.</string>
     <string name="edit_goal_input_label">Meta diária</string>

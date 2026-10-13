@@ -200,8 +200,6 @@ classDiagram
         +setConsumed(int ml)
         +setMaxValue(int ml)
         +isGoalReached() boolean
-        +setShowAbsolute(boolean)
-        +performClick() boolean
         #onDraw(Canvas)
     }
 
@@ -280,14 +278,13 @@ Componente em `ui/widget/`, independente do resto do app. Pode ser colocado em q
 
 ```mermaid
 flowchart LR
-    A[1. Brilho radial<br/>RadialGradient] --> B[2. Trilho<br/>parte restante da meta]
-    B --> C[3. Arco de progresso<br/>parte consumida, até 360°]
-    C --> E[4. Círculo central<br/>ícone, título, valor, apoio]
+    B[1. Trilho<br/>parte restante da meta] --> C[2. Arco de progresso<br/>parte consumida, até 360°]
+    C --> E[3. Círculo central<br/>título, valor, apoio]
 ```
 
-- **Geometria** (raios, espessuras, tamanhos de fonte) é calculada em `onSizeChanged`, sempre como proporção do tamanho da view. Assim, ela se adapta a qualquer `layout_width` / `layout_height`, e o `onDraw` não cria objetos a cada quadro.
+- **Geometria** (raios, espessuras, tamanhos de fonte) é calculada no `onDraw` como proporção do tamanho da view, então ela se adapta a qualquer `layout_width` / `layout_height`. A view é sempre quadrada (`onMeasure`).
 - **O arco** começa em `-90°` (topo) e cresce no sentido horário: `sweep = min(percent, 100) / 100 × 360`.
-- **Texto principal** reduz a fonte automaticamente se não couber no círculo (`fitTextSize`).
+- **Textos** são desenhados pelo helper `drawText` (tamanho, cor e negrito).
 
 ### Animação
 
@@ -330,7 +327,7 @@ stateDiagram-v2
 | Percentual | `68%` | `1360 de 2000 ml` |
 | Absoluto | `1360/2000 ml` | `68% da meta` |
 
-O modo atual é salvo em `onSaveInstanceState`, por isso a view precisa de `android:id`.
+O clique é tratado pela própria view (`setOnClickListener` no construtor).
 
 ### API pública
 
@@ -340,8 +337,6 @@ O modo atual é salvo em `onSaveInstanceState`, por isso a view precisa de `andr
 | `setConsumed(int ml)` | Atalho: calcula o percentual a partir da meta e mantém o valor exato em ml |
 | `setMaxValue(int ml)` | Altera a meta em tempo de execução |
 | `isGoalReached()` | `true` quando o progresso é maior ou igual a 100% |
-| `setShowAbsolute(boolean)` | Define o modo de exibição |
-| `setProgressColor`, `setTextColor`, `setAlertColor` | Cores em tempo de execução |
 
 ### Atributos XML (`res/values/attrs.xml`)
 
