@@ -44,7 +44,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif"
-                    android:fontFeatureSettings="tnum"
+                    android:fontFeatureSettings="num"
                     android:text="@string/summary_default_consumed"
                     android:textColor="@color/hydro_card_foreground"
                     android:textSize="20sp"

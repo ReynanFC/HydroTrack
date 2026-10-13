@@ -2,4 +2,6 @@
 <resources>
     <dimen name="page_horizontal_padding">16dp</dimen>
     <dimen name="page_top_spacing">32dp</dimen>
+    <dimen name="dialog_horizontal_margin">48dp</dimen>
+    <dimen name="dialog_max_width">384dp</dimen>
 </resources>

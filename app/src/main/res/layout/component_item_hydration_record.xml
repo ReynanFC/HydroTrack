@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="14dp">
+
+    <!-- Coluna 1: Ícone (40x40dp, rounded-xl 12dp) -->
+    <FrameLayout
+        android:id="@+id/container_record_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/background_icon_water_soft"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image_record_type"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            app:tint="@color/primary"
+            tools:src="@drawable/ic_glass_water" />
+    </FrameLayout>
+
+    <!-- Coluna 2: Textos (Quantidade + Hora) -->
+    <LinearLayout
+        android:id="@+id/container_record_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button_delete_record"
+        app:layout_constraintStart_toEndOf="@id/container_record_icon"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/text_record_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/foreground"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="+ 300 ml" />
+
+        <TextView
+            android:id="@+id/text_record_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/muted_foreground"
+            android:textSize="12sp"
+            tools:text="14:32" />
+    </LinearLayout>
+
+    <!-- Coluna 3: Botão Excluir (Área de toque 40dp, ícone 16dp) -->
+    <ImageButton
+        android:id="@+id/button_delete_record"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/selector_ghost_button_circle"
+        android:contentDescription="@string/records_delete"
+        android:padding="12dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_trash"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/selector_delete_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Atributos configuráveis da WaterProgressView via XML (lidos com TypedArray). -->
+    <declare-styleable name="WaterProgressView">
+        <!-- Cor do anel de progresso enquanto a meta não foi atingida. -->
+        <attr name="progressColor" format="color" />
+        <!-- Cor do texto principal (percentual ou volume). -->
+        <attr name="textColor" format="color" />
+        <!-- Cor de alerta usada quando a meta é atingida ou ultrapassada. -->
+        <attr name="alertColor" format="color" />
+        <!-- Meta diária em mililitros. -->
+        <attr name="maxValue" format="integer" />
+    </declare-styleable>
+</resources>

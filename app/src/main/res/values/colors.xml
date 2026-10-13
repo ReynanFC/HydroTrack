@@ -10,10 +10,10 @@
     <color name="hydro_muted_foreground">#596C78</color>
     <color name="hydro_card">#FFFFFF</color>
     <color name="hydro_card_foreground">#0F293A</color>
-    <color name="hydro_water_track">#CCE6F5</color>
     <color name="hydro_border">#D7E3EC</color>
     <color name="hydro_water_soft">#CCF1FF</color>
     <color name="hydro_water_line">#A5D2EC</color>
+    <color name="hydro_goal_reached">#D4A017</color>
     <color name="hydration_status_background">#0F374C</color>
     <color name="hydration_status_foreground">#50BDF8</color>
     <color name="edit_goal_accent">#50BDF8</color>
@@ -21,4 +21,14 @@
     <color name="edit_goal_input_background">#0A151E</color>
     <color name="edit_goal_foreground">#E5F1F7</color>
     <color name="edit_goal_muted_foreground">#9CAEB8</color>
+
+    <color name="primary">#59C0F9</color>
+    <color name="foreground">#E6F1F7</color>
+    <color name="muted_foreground">#A1B2BC</color>
+    <color name="water_soft">#1B4156</color>
+    <color name="water_line">#356178</color>
+    <color name="card_bg">#212F3A</color>
+    <color name="card_bg_60">#99212F3A</color>
+    <color name="border">#3E4F5A</color>
+    <color name="destructive">#FF7E77</color>
 </resources>

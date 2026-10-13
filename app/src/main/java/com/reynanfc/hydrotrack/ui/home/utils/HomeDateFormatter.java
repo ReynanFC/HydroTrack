@@ -7,6 +7,8 @@ import java.util.Locale;
 public final class HomeDateFormatter {
 
     private final static String PATTERN_DATE_PT_BR = "'Hoje', d 'de' MMMM";
+    public static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("HH:mm");
+
     private HomeDateFormatter() {
     }
 

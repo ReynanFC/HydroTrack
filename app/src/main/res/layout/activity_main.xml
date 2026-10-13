@@ -37,9 +37,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header" />
 
-    <include
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/water_progress"
-        layout="@layout/component_water_progress"
+        android:name="com.reynanfc.hydrotrack.ui.home.components.WaterProgressFragment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/page_horizontal_padding"
@@ -50,9 +50,9 @@
         app:layout_constraintTop_toBottomOf="@id/hydration_status"
         app:layout_constraintWidth_max="960dp" />
 
-    <include
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/daily_summary"
-        layout="@layout/component_daily_summary"
+        android:name="com.reynanfc.hydrotrack.ui.home.components.DailySummaryFragment"
         android:layout_width="0dp"
         android:layout_height="104dp"
         android:layout_marginStart="@dimen/page_horizontal_padding"
@@ -63,19 +63,58 @@
         app:layout_constraintTop_toBottomOf="@id/water_progress"
         app:layout_constraintWidth_max="960dp" />
 
-    <include
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/quick_add"
-        layout="@layout/component_quick_add"
+        android:name="com.reynanfc.hydrotrack.ui.home.components.QuickAddFragment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/page_horizontal_padding"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="@dimen/page_horizontal_padding"
-        android:layout_marginBottom="80dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/daily_summary"
+        app:layout_constraintWidth_max="960dp" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/custom_add"
+        android:name="com.reynanfc.hydrotrack.ui.home.components.CustomAddFragment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/page_horizontal_padding"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="@dimen/page_horizontal_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/quick_add"
+        app:layout_constraintWidth_max="960dp" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/section_today_records"
+        android:name="com.reynanfc.hydrotrack.ui.home.components.TodayRecordsFragment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/custom_add" />
+
+    <TextView
+        android:id="@+id/text_daily_reset_notice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/page_horizontal_padding"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="@dimen/page_horizontal_padding"
+        android:layout_marginBottom="48dp"
+        android:gravity="center"
+        android:text="@string/daily_reset_notice"
+        android:textColor="@color/hydro_muted_foreground"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/section_today_records"
         app:layout_constraintWidth_max="960dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

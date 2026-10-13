@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:accessibilityHeading="true"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/custom_add_label"
+        android:textColor="@color/hydro_foreground"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_custom_amount"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:hint="@string/custom_add_hint"
+            app:boxBackgroundColor="@color/hydro_card"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxStrokeColor="@color/selector_custom_add_stroke"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:hintTextColor="@color/hydro_primary"
+            app:suffixText="@string/summary_unit_ml"
+            app:suffixTextColor="@color/hydro_muted_foreground">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_custom_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="4"
+                android:maxLines="1"
+                android:paddingVertical="16dp"
+                android:textColor="@color/hydro_foreground"
+                android:textSize="18sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_add_custom_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:minWidth="112dp"
+            android:text="@string/custom_add_button"
+            android:textAllCaps="false"
+            android:textColor="@color/hydro_background"
+            android:textSize="16sp"
+            app:backgroundTint="@color/hydro_primary"
+            app:cornerRadius="12dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
