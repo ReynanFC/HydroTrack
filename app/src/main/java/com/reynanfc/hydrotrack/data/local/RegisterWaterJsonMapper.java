@@ -9,9 +9,11 @@ import org.json.JSONObject;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
  public class RegisterWaterJsonMapper {
 
+    private static final String JSON_ID = "id";
     private static final String JSON_ML = "ml";
     private static final String JSON_TIME = "time";
 
@@ -25,6 +27,7 @@ import java.util.List;
             for (int i = 0; i < array.length(); i++) {
                 JSONObject item = array.getJSONObject(i);
                 records.add(new RegisterWater(
+                        item.optString(JSON_ID, UUID.randomUUID().toString()),
                         item.getInt(JSON_ML),
                         LocalDateTime.parse(item.getString(JSON_TIME))));
             }
@@ -39,6 +42,7 @@ import java.util.List;
         try {
             for (RegisterWater record : records) {
                 array.put(new JSONObject()
+                        .put(JSON_ID, record.id())
                         .put(JSON_ML, record.consumeMl())
                         .put(JSON_TIME, record.time().toString()));
             }

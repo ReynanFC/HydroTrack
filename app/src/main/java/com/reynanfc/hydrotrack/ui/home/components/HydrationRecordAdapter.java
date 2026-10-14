@@ -29,7 +29,7 @@ public class HydrationRecordAdapter
                 @Override
                 public boolean areItemsTheSame(@NonNull RegisterWater oldItem,
                                                @NonNull RegisterWater newItem) {
-                    return oldItem.time().equals(newItem.time());
+                    return oldItem.id().equals(newItem.id());
                 }
 
                 @Override
